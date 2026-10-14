@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dandi Bagus Setiawan — Portofolio Teknik Rekayasa Multimedia</title>
+  <meta name="description" content="Portofolio mahasiswa Teknik Rekayasa Multimedia yang mencari magang semester 6. Kumpulan karya desain, video, animasi, dan web.">
+  <meta name="theme-color" content="#D40000">
+
+  <!-- Open Graph (ganti URL dan gambar setelah deploy; og:image sebaiknya URL absolut) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dandi Bagus Setiawan — Portofolio TRM">
+  <meta property="og:description" content="Mencari magang semester 6. Lihat karya desain, video, animasi, dan web.">
+  <meta property="og:image" content="assets/images/work/surabaya-stride.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <script>
+    // Terapkan tema tersimpan sebelum halaman digambar (mencegah kedipan). Bawaan: terang.
+    try { document.documentElement.dataset.theme = localStorage.getItem("theme") === "dark" ? "dark" : "light"; }
+    catch (e) { document.documentElement.dataset.theme = "light"; }
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=20261014i">
+</head>
+<body>
+  <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+  <!-- Indikator scroll: speedometer vertikal -->
+  <div class="speedo" aria-hidden="true">
+    <div class="speedo__track"><div class="speedo__fill" id="speedoFill"></div></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#home" aria-label="Ke atas"><span>DANDI</span></a>
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Navigasi utama">
+        <ul class="nav__menu" id="navMenu">
+          <li><a href="#home" data-section="home"><b>Home</b></a></li>
+          <li><a href="#about" data-section="about"><b>About</b></a></li>
+          <li><a href="#work" data-section="work"><b>Work</b></a></li>
+          <li><a href="#contact" data-section="contact"><b>Contact</b></a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti ke mode gelap" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ========== HOME / START LINE ========== -->
+    <section class="section hero" id="home" aria-labelledby="heroName">
+      <div class="container hero__wrap">
+        <!-- Banner gradasi merah; foto potongan (tanpa latar) di kanan menonjol dari atas banner -->
+        <div class="hero__card">
+          <div class="hero__inner">
+            <h1 class="hero__name" id="heroName"><span>Mu<span class="kern">l</span>timedia</span> <span>Engineering</span> <span>Technology</span></h1>
+            <div class="hero__cta">
+              <span class="btn-glow"><a class="btn btn--primary" href="#work">View Work</a></span>
+              <span class="btn-glow"><a class="btn btn--ghost" href="#contact"><span>Contact Me</span></a></span>
+            </div>
+          </div>
+        </div>
+        <img class="hero__photo" src="assets/images/photokako-cutout.png" alt="Foto Dandi Bagus Setiawan" width="565" height="979" fetchpriority="high">
+      </div>
+    </section>
+
+    <!-- ========== ABOUT / DRIVER PROFILE ========== -->
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 id="aboutTitle">About</h2>
+        </header>
+
+        <div class="about">
+          <figure class="about__photo reveal">
+            <img src="assets/images/Dandi.jpg" alt="Foto profil Dandi" width="400" height="500" loading="lazy">
+          </figure>
+          <div class="about__skills reveal">
+            <h3 class="skills__title">Skills</h3>
+            <ul class="skills" id="skillList" aria-label="Keahlian utama"></ul>
+          </div>
+
+          <div class="about__body reveal">
+            <p class="about__bio" data-profile="bio">Mahasiswa Teknologi Rekayasa Multimedia di PENS dengan keterampilan di bidang desain grafis, UI/UX, dan pengembangan web. Berpengalaman mengerjakan proyek berbasis web, aplikasi augmented reality, dan visual novel interaktif. Disiplin, mudah beradaptasi, dan siap belajar hal baru di lingkungan kerja profesional.</p>
+            <dl class="about__info">
+              <div><dt>Nama</dt><dd data-profile="name">Dandi Bagus Setiawan</dd></div>
+              <div><dt>Jurusan</dt><dd data-profile="major">Teknik Rekayasa Multimedia</dd></div>
+              <div><dt>Kampus</dt><dd data-profile="campus">PENS (Politeknik Elektronika Negeri Surabaya)</dd></div>
+              <div><dt>Semester</dt><dd data-profile="semester">5</dd></div>
+            </dl>
+            <blockquote class="about__quote">
+              <p data-profile="quote">Karya yang baik lahir dari rasa ingin tahu dan kebiasaan mencoba lagi.</p>
+            </blockquote>
+          </div>
+        </div>
+        <div class="about__extra reveal">
+          <h3 class="skills__title">Tools</h3>
+          <ul class="tools" id="toolList" aria-label="Tools yang dipakai"></ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== WORK / GARAGE ========== -->
+    <section class="section" id="work" aria-labelledby="workTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 id="workTitle">Work</h2>
+        </header>
+
+        <div class="filters reveal">
+          <div class="filters__group" role="group" aria-label="Filter kategori" id="filterCategory"></div>
+        </div>
+        <p class="sr-only" id="resultCount" aria-live="polite"></p>
+
+        <div class="grid" id="grid"></div>
+        <p class="grid__empty" id="gridEmpty" hidden>Belum ada proyek di kategori ini.</p>
+      </div>
+    </section>
+
+
+    <!-- ========== CONTACT / PIT STOP ========== -->
+    <section class="section" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 id="contactTitle">Contact</h2>
+        </header>
+        <p class="contact__intro reveal"><strong>Mari Terhubung!</strong><br>Punya ide proyek menarik, peluang magang, atau sekadar ingin berdiskusi? Silakan sapa saya melalui salah satu kontak di bawah ini.</p>
+
+        <ul class="contact reveal" id="contactList">
+          <li>
+            <a class="contact__item" id="linkEmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=dandiisetiawan32@gmail.com&amp;su=Kerja%20Sama%20%2F%20Magang" target="_blank" rel="noopener noreferrer">
+              <span class="contact__logo"><img src="assets/contact/gmail.png" alt="" width="56" height="56" loading="lazy"></span>
+              <span class="contact__name">Email</span>
+              <span class="contact__desc">Untuk kerja sama dan lowongan magang</span>
+              <span class="contact__value" id="emailText">dandiisetiawan32@gmail.com</span>
+              <span class="contact__hint">Kirim email <i aria-hidden="true">&#8599;</i></span>
+            </a>
+          </li>
+          <li>
+            <a class="contact__item" id="linkGithub" href="https://github.com/dandiibgss" target="_blank" rel="noopener noreferrer">
+              <span class="contact__logo"><img src="assets/contact/github.png" alt="" width="56" height="56" loading="lazy"></span>
+              <span class="contact__name">GitHub</span>
+              <span class="contact__desc">Kode dan proyek yang saya kerjakan</span>
+              <span class="contact__value">github.com/dandiibgss</span>
+              <span class="contact__hint">Buka profil <i aria-hidden="true">&#8599;</i></span>
+            </a>
+          </li>
+          <li>
+            <a class="contact__item" id="linkInstagram" href="https://www.instagram.com/dandiibgs" target="_blank" rel="noopener noreferrer">
+              <span class="contact__logo"><img src="assets/contact/instagram.png" alt="" width="56" height="56" loading="lazy"></span>
+              <span class="contact__name">Instagram</span>
+              <span class="contact__desc">Karya dan keseharian saya</span>
+              <span class="contact__value">@dandiibgs</span>
+              <span class="contact__hint">Buka profil <i aria-hidden="true">&#8599;</i></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="checker checker--footer" aria-hidden="true"></div>
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year">2025</span> <span data-profile="name">Dandi Bagus Setiawan</span>. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal detail proyek -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <div class="modal__box">
+      <button class="modal__close" id="modalClose" type="button" aria-label="Tutup detail proyek">&times;</button>
+      <div class="modal__media" id="modalMedia"></div>
+      <div class="modal__body">
+        <h3 id="modalTitle"></h3>
+        <p class="modal__meta" id="modalMeta"></p>
+        <p class="modal__desc" id="modalDesc"></p>
+        <div class="modal__details" id="modalDetails"></div>
+        <p class="modal__label">Tool yang dipakai</p>
+        <ul class="chips" id="modalTools"></ul>
+        <a class="btn btn--primary" id="modalLink" href="#" target="_blank" rel="noopener noreferrer" hidden>Buka Proyek ↗</a>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/projects.js?v=20261014i"></script>
+  <script src="js/main.js?v=20261014i"></script>
+</body>
+</html>
