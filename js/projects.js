@@ -7,7 +7,7 @@ const PROFILE = {
   name: "Dandi Bagus Setiawan",
   nickname: "Dandi",
   campus: "PENS (Politeknik Elektronika Negeri Surabaya)",
-  major: "Teknik Rekayasa Multimedia",
+  major: "Teknologi Rekayasa Multimedia",
   semester: "5",
   // Judul besar di bagian Home (hero) — ganti sesukamu
   heroTitle: "Multimedia Engineering Technology",

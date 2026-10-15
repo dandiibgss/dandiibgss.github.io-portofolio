@@ -15,7 +15,7 @@
       const val = PROFILE[el.dataset.profile];
       if (val) el.textContent = val;
     });
-    document.title = `${PROFILE.name} — Portofolio Teknik Rekayasa Multimedia`;
+    document.title = `${PROFILE.name} — Portofolio Teknologi Rekayasa Multimedia`;
 
     const c = PROFILE.contact;
     $("#emailText").textContent = c.email;
